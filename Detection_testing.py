@@ -144,9 +144,6 @@ class streaming:
  
         cv2.waitKey(1)
 
-    #def touch(self):
-        #self.drone(moveBy(0, 0, 0, -3.142)>> FlyingStateChanged(state="hovering", _timeout=10)).wait() 
-
     def h264_frame_cb(self, h264_frame):
         frame_pointer, frame_size = h264_frame.as_ctypes_pointer()
         info = h264_frame.info()
@@ -183,16 +180,7 @@ if __name__ == "__main__":
     s=streaming()
     s.start()
     while True:   
-        #if yuv_frame_cb:
-            #break
         cv2.waitKey(1)
 
-#if state.success():
-   # keep checking Global position (GPS) and speed.
-   #cur_pos = drone.get_state(PositionChanged)
-   #cur_speed = drone.get_state(SpeedChanged)
-   #print("current pos(gps): = ",cur_pos)
-   #print("current speed: = ",cur_speed)
-   #time.sleep(10)
 
 
